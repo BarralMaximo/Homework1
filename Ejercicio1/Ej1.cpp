@@ -1,15 +1,10 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
-using matrix = vector<vector<int>>;
+#include "Ej1.hpp"
 
-/**
- * Crea una matriz cuadrada de tamaño n x n y la llena con valores secuenciales.
- *
- * @param n Tamaño de la matriz (n x n).
- * @return Matriz cuadrada de tamaño n x n llena con valores secuenciales.
- */
+using namespace std;
+
 matrix create_matrix(int n) {
     matrix M(n, vector<int>(n));
     int cont = 1;
@@ -23,11 +18,6 @@ matrix create_matrix(int n) {
     return M;
 }
 
-/**
- * Imprime una matriz cuadrada en orden inverso (de abajo hacia arriba y de derecha a izquierda).
- *
- * @param M Matriz cuadrada a imprimir.
- */
 void print_matrix(matrix M){
     size_t size = M.size();
     int row = size;
@@ -41,7 +31,6 @@ void print_matrix(matrix M){
         column -= 1;
     }
 }
-
 
 int main(){
     int n = 0;
