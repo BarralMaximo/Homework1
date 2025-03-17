@@ -1,5 +1,7 @@
 #include "Ej3.hpp"
 
+#include <iostream>
+
 int main() {
     std::cout << "PRUEBA DE FUNCIONAMIENTO - EJERCICIO 3 - BARRAL MÁXIMO\n";
 

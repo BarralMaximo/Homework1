@@ -1,6 +1,8 @@
 #ifndef Ej3_hpp
 #define Ej3_hpp
 
+#include <memory>
+
 /**
  * @brief Estructura que representa un nodo en la lista enlazada
  */
