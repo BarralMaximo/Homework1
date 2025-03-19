@@ -3,7 +3,9 @@
 
 #include "Ej4Header.hpp"
 
-bool compare_strings(const std::string& str1, const std::string& str2, size_t index = 0) {
+using namespace std;
+
+bool compare_strings(const std::string& str1, const std::string& str2, size_t index) {
     // Si ambos strings llegaron al final al mismo tiempo, son iguales
     if (index == str1.length() && index == str2.length()) return true;
 
