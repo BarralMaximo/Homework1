@@ -27,7 +27,7 @@ Para compilar el código del Ejercicio 3, usa el siguiente comando desde la carp
 Existen dos formas de compilar este ejercicio (ambos deben ejecutarse desde la carpeta de Ejercicio4):
 
 - Una versión con una interfaz por terminal que permite ingresar dos strings y devuelve si son iguales o no.
-- Una versión de tests en la que se comparan los tiempos de ejecución de varias funciones.
+- Una versión de tests en la que se comparan los tiempos de ejecución de varias funciones de comparación de strings con distintos tipos de datos de entrada.
 
 #### Compilar el ejercicio 4 con interfaz de usuario
 ```bash
