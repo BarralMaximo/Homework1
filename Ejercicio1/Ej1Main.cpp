@@ -7,7 +7,7 @@ using namespace std;
 int main(){
     int n = 0;
 
-    cout << "Ejercicio 1 - Creación e impresión de matriz" << endl << "Por favor inserte un valor n: ";
+    cout << "Ejercicio 1 - Creación e impresión de matriz \n Por favor inserte un valor n: ";
 
     cin >> n;
 

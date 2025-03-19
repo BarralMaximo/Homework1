@@ -41,15 +41,17 @@ int main() {
     constexpr const char* const_text1 = "Este es un texto de ejemplo con más de 64 caracteres para demostrar la funcionalidad de la función.";
     constexpr const char* const_text2 = "Este es un texto de ejemplo con más de 64 caracteres para demostrar la funcionalidad de la función.";
 
+    start_time = chrono::high_resolution_clock::now();
     constexpr bool constexpr_result = compare_constexpr(const_text1, const_text2);
-
-    cout << "A compare_constexpr le tomó: 0 nanosegundos (evaluado en tiempo de compilación)" << endl;
-    cout << "Resultado de compare_constexpr: " << boolalpha << constexpr_result << endl << endl;
+    end_time = chrono::high_resolution_clock::now();
+    elapsed_time = chrono::duration_cast<chrono::nanoseconds>(end_time - start_time);
+    cout << "A constexpr_result le tomó: " << elapsed_time.count() << " nanosegundos" << endl;
+    cout << "Resultado de constexpr_result: " << boolalpha << result << endl << endl;
     
     /*CONCLUSIONES
     Los resultados muestran diferencias significativas en los tiempos de ejecución entre las distintas implementaciones de la comparación de cadenas:
-    - constexpr es la opción más eficiente cuando se trabaja con datos constantes conocidos en tiempo de compilación, 
-    ya que evita completamente la ejecución de código.
+    - constexpr es la opción más eficiente cuando se trabaja con datos constantes conocidos en tiempo de compilación, ya que evita completamente la ejecución
+    de código.
 
     - Para datos en tiempo de ejecución, char* ofrece un mejor rendimiento que std::string en este tipo de comparación. Imagino que esto se debe al manejo
     interno que hace std::string que aumenta la cantidad de código a ejecutar y por ende su duración.
